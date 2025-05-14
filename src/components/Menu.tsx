@@ -56,9 +56,9 @@ export function Menu() {
       <NavigationMenu>
         <NavigationMenuList>
           <NavigationMenuItem>
-            <NavigationMenuTrigger>关于我们</NavigationMenuTrigger>
+            <NavigationMenuTrigger className="no-shadow">关于我们</NavigationMenuTrigger>
             <NavigationMenuContent>
-              <ul className="flex flex-col gap-3 p-4 w-[20vw] max-w-[20vw]">
+              <ul className="flex flex-col gap-3 p-4 w-[98%] mx-auto">
                 {aboutItems.map((item) => (
                   <ListItem
                     key={item.title}
@@ -73,9 +73,9 @@ export function Menu() {
           </NavigationMenuItem>
 
           <NavigationMenuItem>
-            <NavigationMenuTrigger>团队优势</NavigationMenuTrigger>
+            <NavigationMenuTrigger className="no-shadow">团队优势</NavigationMenuTrigger>
             <NavigationMenuContent>
-              <ul className="flex flex-col gap-3 p-4 w-[20vw] max-w-[20vw]">
+              <ul className="flex flex-col gap-3 p-4 w-[98%] mx-auto">
                 {advantageItems.map((item) => (
                   <ListItem
                     key={item.title}
@@ -91,7 +91,7 @@ export function Menu() {
 
           <NavigationMenuItem>
             <NavigationMenuLink asChild>
-              <a href="/#projects" className={navigationMenuTriggerStyle()}>
+              <a href="/#projects" className={cn(navigationMenuTriggerStyle(), "no-shadow")}>
                 项目展示
               </a>
             </NavigationMenuLink>
@@ -99,7 +99,7 @@ export function Menu() {
 
           <NavigationMenuItem>
             <NavigationMenuLink asChild>
-              <a href="/#contact" className={navigationMenuTriggerStyle()}>
+              <a href="/#contact" className={cn(navigationMenuTriggerStyle(), "no-shadow")}>
                 联系我们
               </a>
             </NavigationMenuLink>
